@@ -2,7 +2,7 @@ import React from 'react'
 
 const App = () => {
   return (
-    <h1 className='text-5xl text-orange-500 font-bold font-circular-web'>
+    <h1 className='text-5xl text-primary font-bold font-circular-web'>
       Welcome to Website!
     </h1>
   )

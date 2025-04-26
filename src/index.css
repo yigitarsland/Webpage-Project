@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
+:root {
+  /* Define custom color variables */
+  --color-primary: #4f46e5; /* Indigo */
+  --color-secondary: #10b981; /* Emerald */
+  --color-accent: #f59e0b; /* Amber */
+  --color-neutral: #1f2937; /* Gray */
+  --color-background: #dfdff0; /* Background Color */
+}
+
 body {
   font-family: 'General Sans', sans-serif;
   width: 100dvw;
-  background-color: #dfdff0;
+  background-color: var(--color-background);
   overflow-x: hidden;
 }
 
 @layer utilities {
+  /* Custom font utilities */
   .font-circular-web {
     @apply font-sans;
     font-family: 'circular-web', sans-serif;
@@ -26,6 +36,48 @@ body {
     font-family: 'Robert', sans-serif;
     font-weight: 400;
   }
+
+  /* Custom color utilities */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+
+  .bg-neutral {
+    background-color: var(--color-neutral);
+  }
+  .text-neutral {
+    color: var(--color-neutral);
+  }
+  .border-neutral {
+    border-color: var(--color-neutral);
+  }
+
 }
 
 @layer base {
@@ -48,4 +100,6 @@ body {
         font-family: 'robert-regular';
         src: url(/fonts/robert-regular.woff2) format('woff2');
     }
+
+
 }
